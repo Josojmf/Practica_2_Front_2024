@@ -1,5 +1,5 @@
 export default function Home() {
   return (
-    <div class="home">Practica_2</div>
+    <div className="home">Practica_2</div>
   );
 }

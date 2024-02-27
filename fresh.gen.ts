@@ -3,16 +3,24 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_404 from "./routes/_404.tsx";
-import * as $aircraft_model_ from "./routes/aircraft/[model].tsx";
+import * as $_app from "./routes/_app.tsx";
+import * as $city from "./routes/city.tsx";
+import * as $city_index from "./routes/city/index.tsx";
+import * as $dog_index from "./routes/dog/index.tsx";
 import * as $index from "./routes/index.tsx";
+import * as $user from "./routes/user.tsx";
 
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
-    "./routes/aircraft/[model].tsx": $aircraft_model_,
+    "./routes/_app.tsx": $_app,
+    "./routes/city.tsx": $city,
+    "./routes/city/index.tsx": $city_index,
+    "./routes/dog/index.tsx": $dog_index,
     "./routes/index.tsx": $index,
+    "./routes/user.tsx": $user,
   },
   islands: {},
   baseUrl: import.meta.url,
