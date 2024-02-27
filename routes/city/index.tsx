@@ -25,10 +25,10 @@ export const handler:Handlers={
 const Page = (props:PageProps<City | undefined> & {city:City})    => {
     const city = props.data;
     return (
-       <div>
-            <form action="/city" method="get">
+       <div className="InCity">
+            <form action="/city" method="get" className="Searchbar">
             <input type="text" name="city" placeholder="Nombre de la ciudad" />
-            <button type="submit">Buscar</button>
+            <button type="submit" className="SearchButton">Buscar</button>
             </form>
 
             {city && <CityComp city={city} />}

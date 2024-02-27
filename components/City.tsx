@@ -12,15 +12,13 @@ type City = {
 
 const City: FunctionComponent<{city:City}> = (props) => {
     return (
-        <div>
-            <h1 className="CityDiv">{props.city.name}</h1>
-            <div>
-            <h2>{props.city.country}</h2>
-            <h3>{props.city.latitude}</h3>
+        <div className="City">
+            <h1>{props.city.name}</h1>
+            <h2>Pais:{props.city.country}</h2>
+            <h3>Latitud:{props.city.latitude}</h3>
             <h4>{props.city.longitude}</h4>
             <h5>{props.city.population}</h5>
             <h6>{props.city.is_capital}</h6>
-            /</div>
         </div>
     );
 }

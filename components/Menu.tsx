@@ -11,13 +11,20 @@ type User ={
   };
 
 const Menu: FunctionComponent<{ user:User }> = (props) => {
+    var gender =null;
+    if(props.user.sex == "M"){
+        gender = "Masculino";
+    }
+    else{
+        gender = "Femenino";
+    }
     return (
         <div class="user">
             <IconUser />
-            <h1>Menu</h1>
-            <h2>Usuario: {props.user.username}</h2>
-            <h3>Sexo: {props.user.sex}</h3>
-            <h4>Dirección: {props.user.address}</h4>
+            <h1>{props.user.username}</h1>
+            <h2>{props.user.email}</h2>
+            <h3>Sexo: {gender}</h3>
+            <h3>Dirección: {props.user.address}</h3>
     </div>
     );
 

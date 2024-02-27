@@ -1,16 +1,9 @@
 
-.home{
-  align-items: center;
-  justify-content: center;
-  background-color: #ff0000;
-  padding: 20px;
-  margin: 20px;
-}
 .user {
   position: relative;
   margin: auto;
   padding: 20px;
-  transform: translate(0%, 0%);
+  transform: translate(0%, 30%);
   background-color: #909090;
   height: 80%;
   width: fit-content;
@@ -26,26 +19,92 @@
   margin: 20px;
   background-color: white;
 }
-.inputcity{
-  width: 100px;
-  height: 2px;
-  border-radius: 5px;
-  margin: 20px;
-}
 .CityDiv{
   width: fit-content;
   height: fit-content;
+  top: 50%;
+  left: 50%;
   border-radius: 5px;
   margin: 20px;
   background-color: #04f7ff;
   border-radius: 5px;
 }
-.CityBody{
-  display: flex;
+.City{
+  position: absolute;
+  left: 15%;
+  top: 25%;
+  padding: 20px;
+  transform: translate(200%, -15%);
+  background-color: #909090;
   width: fit-content;
-  height: 200%;
+  height: fit-content;
   border-radius: 5px;
   margin: 20px;
+ 
+}
+.DogImg{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(0%, 0%);
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+
+}
+.Dog{
+  display: flex;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(0%, 10%);
   background-color: #909090;
-  border-radius: 5px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.Searchbar{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(0%, 0%);
+  background-color: #909090;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.DogButton{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(650%, 0%);
+  background-color: #909090;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.SearchButton{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(10%, 0%);
+  background-color: #909090;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.SearchbarDog{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(250%, 0%);
+  background-color: #909090;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
 }
