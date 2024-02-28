@@ -14,11 +14,11 @@ const City: FunctionComponent<{city:City}> = (props) => {
     return (
         <div className="City">
             <h1>{props.city.name}</h1>
-            <h2>Pais:{props.city.country}</h2>
-            <h3>Latitud:{props.city.latitude}</h3>
-            <h4>{props.city.longitude}</h4>
-            <h5>{props.city.population}</h5>
-            <h6>{props.city.is_capital}</h6>
+            <li>Latitude: {props.city.latitude}</li>
+            <li>Longitude: {props.city.longitude}</li>
+            <li>Country: {props.city.country}</li>
+            <li>Population: {props.city.population}</li>
+            <li>Capital: {props.city.is_capital ? 'Yes' : 'No'}</li> 
         </div>
     );
 }

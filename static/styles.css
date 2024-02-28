@@ -30,16 +30,25 @@
   border-radius: 5px;
 }
 .City{
-  position: absolute;
-  left: 15%;
-  top: 25%;
+  position: relative;
+  left: 40%;
+  top: 100%;
   padding: 20px;
-  transform: translate(200%, -15%);
   background-color: #909090;
   width: fit-content;
   height: fit-content;
   border-radius: 5px;
   margin: 20px;
+ 
+}
+.InCity{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(0%, 0%);
  
 }
 .DogImg{
@@ -89,11 +98,22 @@
 .SearchButton{
   position: relative;
   margin: auto;
-  padding: 20px;
-  transform: translate(10%, 0%);
+  padding: 10px;
+  transform: translate(5%, 0%);
   background-color: #909090;
   width: fit-content;
-  height: fit-content;
+  height: 0%;
+  border-radius: 5%;
+  text-align: center;
+}
+.SearchButtonDog{
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  transform: translate(580%, 0%);
+  background-color: #909090;
+  width: fit-content;
+  height: 1%;
   border-radius: 5%;
   text-align: center;
 }
@@ -101,8 +121,32 @@
   position: relative;
   margin: auto;
   padding: 20px;
-  transform: translate(250%, 0%);
+  transform: translate(230%, 0%);
   background-color: #909090;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.Error{
+  position: relative;
+  margin: auto;
+  padding: auto;
+  padding: 20px;
+  transform: translate(0%, 10%);
+  background-color: #868686;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5%;
+  text-align: center;
+}
+.ErrorNF{
+  position: relative;
+  margin-bottom: 5%;
+  padding: auto;
+  padding: 50px;
+  transform: translate(100%, 0%);
+  background-color: #868686;
   width: fit-content;
   height: fit-content;
   border-radius: 5%;

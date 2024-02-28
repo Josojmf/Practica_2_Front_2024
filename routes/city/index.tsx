@@ -9,15 +9,25 @@ type City ={
     population:number;
     is_capital:boolean;   
     };
+let error=0;
 export const handler:Handlers={
     GET: async (req:Request,ctx:FreshContext) => {
         const url = new URL(req.url);
         const city = url.searchParams.get('city');
+        if(!city){
+            return ctx.render(undefined);
+        }
         const headers = {
         'X-Api-Key': 'UJhYVUxrSKqPZP7V8WD9PA==sYM7jOOqw36WSoOW'
         };
         const APIurl = `https://api.api-ninjas.com/v1/city?name=${city}`;
         const response = await axios.get(APIurl,{headers});
+        if(response.data.length === 0){
+            error=1;
+            return ctx.render(undefined);
+        } else {
+            error=0;
+        }
         const cityres = response.data[0] as City;
         return ctx.render(cityres);
     }
@@ -25,6 +35,7 @@ export const handler:Handlers={
 const Page = (props:PageProps<City | undefined> & {city:City})    => {
     const city = props.data;
     return (
+        <div>
        <div className="InCity">
             <form action="/city" method="get" className="Searchbar">
             <input type="text" name="city" placeholder="Nombre de la ciudad" />
@@ -32,7 +43,10 @@ const Page = (props:PageProps<City | undefined> & {city:City})    => {
             </form>
 
             {city && <CityComp city={city} />}
+            {error==1 && <h1 className="ErrorNF">Ciudad no encontrada</h1>}
+            {!city && <h1 className="Error">Busca una ciudad</h1>}
        </div>   
+       </div>
     );
 };
 export default Page;
